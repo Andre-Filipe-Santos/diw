@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  list-style-type: none; /*remove os bullet points da <ul>*/
+  padding: 0pc;
+  gap: 20px;
+}
