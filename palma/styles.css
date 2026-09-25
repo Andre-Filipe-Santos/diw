@@ -1,0 +1,34 @@
+header{grid-area: h;}
+main{grid-area:m;}
+aside{grid-area:a;}
+footer{grid-area:f;}
+
+header{
+    background-color: blue;
+}
+main{
+    display:flex;
+    flex-direction: row;
+    background-color: red;
+}
+aside{
+    background-color: green;
+}
+footer{
+    background-color:#608000;
+}
+
+
+
+
+body{
+
+display:grid;
+grid-template-columns:3fr 1fr;
+grid-template-rows: 0.5fr 10 0.5fr;
+grid-template-areas:
+'h h h'
+'m a a'
+'f f f';
+
+}
