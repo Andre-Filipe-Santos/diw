@@ -1,6 +1,117 @@
-.container {
+header {
+  margin-bottom: 30px;
+}
+
+body {
+    background-color: #f5ebe0;
+}
+
+main{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+
+  color: white;
+  background-color: #bdd370;
+  padding: 50px 0;
+  margin: 0px;
+  border-radius: 10px;
+}
+h2 {
+
+
+  color: white;
+  background-color: #9ea586;
+  padding: 50px 0;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+nav {
+  padding: 3px 0;
+  background-color: #ccba8f;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+
+
+.navlinks {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+
+  color: white;
+
   list-style-type: none; /*remove os bullet points da <ul>*/
-  padding: 0pc;
+  gap: 100px;
+}
+
+ul a {
+  /* afeta os tags ancora */
+
+  text-decoration: none; /* remove o undreline dos links */
+  color: inherit; /* faz com que o link herde a cor do texto pai */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.tabela{
+  display: flex;
+  justify-content: center;
+}
+
+.curiosidades ul {
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.fotografias {
   gap: 20px;
+}
+
+.fotografias img {
+  width: 150px;
+  border-radius: 20px;
+}
+
+.poema p {
+  font-family: "Brush Script MT", "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 1.2rem;
+}
+
+.poema p:last-child {
+  color: #1c7900;
+}
+
+.poema p:first-child {
+  color: #1c7900;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  color: white;
+
+  background-color: #aeafb1;
 }

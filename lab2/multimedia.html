@@ -6,29 +6,6 @@
     <title>Multimédia</title>
     <!-- ESTA LINHA ASSOCIA O CSS AO HTML -->
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .fotografias {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .fotografias img {
-        width: 150px;
-        border-radius: 20px;
-      }
-      .poema p {
-        font-family:
-          "Brush Script MT", "Comic Sans MS", "Bradley Hand", cursive;
-        font-size: 1.2rem;
-      }
-      .poema p:last-child {
-        color: #1c7900;
-      }
-      .poema p:first-child {
-        color: #1c7900;
-      }
-    </style>
   </head>
 
   <body>
@@ -46,26 +23,30 @@
     </header>
 
     <main>
-      <h2>Multimédia</h2>
-      <p>Nesta página encontra conteúdos multimédia</p>
-      <p>
+      <section>
+        <h2>Multimédia</h2>
+        <p>Nesta página encontra conteúdos multimédia</p>
+      </section>
+
+      <section class="navlinks">
         <a href="#fotografias">Fotografias</a>
         <a href="#video">Vídeo</a>
-        <a href="#poema">Poema</a>
-      </p>
+        <a href="#poesia">Poema</a>
+      </section>
 
       <section>
         <h3 id="fotografias">Fotografias</h3>
-        <div class="fotografias">
-          <img src="images/catedral.jpg" alt="Catedral de Viseu" />
-          <img src="images/fonte.jpg" alt="Fonte do rossio em Viseu" />
-          <img src="images/igreja.jpeg" alt="Igreja da Misericórdia em Viseu" />
-          <img src="images/mural.jpeg" alt="mural do rossio em Viseu" />
-          <img src="images/museu.jpg" alt="Museu Grao Vasco em Viseu" />
-          <img src="images/porta.jpeg" alt="Porta dos Cavaleiros em Viseu" />
-          <img src="images/se.jpg" alt="Se de Viseu" />
-          <img src="images/viriato.jpg" alt="Estátua Viriato em Viseu" />
-        </div>
+      </section>
+
+      <section class="fotografias">
+        <img src="images/catedral.jpg" alt="Catedral de Viseu" />
+        <img src="images/fonte.jpg" alt="Fonte do rossio em Viseu" />
+        <img src="images/igreja.jpeg" alt="Igreja da Misericórdia em Viseu" />
+        <img src="images/mural.jpeg" alt="mural do rossio em Viseu" />
+        <img src="images/museu.jpg" alt="Museu Grao Vasco em Viseu" />
+        <img src="images/porta.jpeg" alt="Porta dos Cavaleiros em Viseu" />
+        <img src="images/se.jpg" alt="Se de Viseu" />
+        <img src="images/viriato.jpg" alt="Estátua Viriato em Viseu" />
       </section>
 
       <section>
@@ -75,6 +56,7 @@
           height="315"
           src="https://www.youtube.com/embed/PUY7aUn9TA0?si=TZFp5MdfEIskWnBo"
           title="YouTube video player"
+          style="border-radius: 10px"
           frameborder="0"
           allow="
             accelerometer;
@@ -90,7 +72,7 @@
         ></iframe>
       </section>
 
-      <section>
+      <section class="poema">
         <h3 id="poesia">Poesia</h3>
 
         <div class="poema">
