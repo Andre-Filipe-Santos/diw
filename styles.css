@@ -1,5 +1,26 @@
+header {
+  background-color: #bdd370;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
 body {
-  background-color: #ffe60080;
+  background-color: #f5ebe0;
 }
 
 .fotoHomePage {
@@ -11,21 +32,27 @@ section {
 }
 
 .heropage {
+  display: flex;
+  flex-direction: column;
+
   background-image: url("/images/heroimage3.jpg");
   background-size: cover;
+  border-radius: 10px;
 }
 
 .texto-motivacional {
-  color: #faedd6;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1); /* Sombra preta semi-transparente */
+  position: relative;
+  top: 4vw;
+  left: 15vw;
+
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
   text-align: center;
 
-  width: 1100px;
-  height: 60px;
-
-  position: relative;
-  top: 350px;
-  left: 550px;
+  /* Added Flexbox properties */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns all children (including the button) to the left */
 }
 
 .texto-motivacional p:first-child {
@@ -40,18 +67,29 @@ section {
 }
 
 .butao-projetos {
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  width: 120px;
-  height: 50px;
-
-
+  background-color: #bdd370;
+  color: white;
   border-radius: 10px;
+  text-decoration: none;
 
-  font-size: 25px;
+  text-align: center; /* Centers the text inside the button */
+  font-size: 2vw;
+  padding: 10px 20px;
+  width: auto; /* Fits to the content or set a custom width */
+}
 
-  background-color: #5dd429;
+.labs h2 {
+  display: flex;
+  flex-direction: column;
 
+  align-items: center; /* Horizontally centers all children inside .labs */
+  justify-content: center;
+
+  background-color: #ccba8f;
+  height: 50px;
+}
+
+.lablinks {
+  display: flex;
+  justify-content: center;
 }

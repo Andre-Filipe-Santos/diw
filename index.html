@@ -11,15 +11,21 @@
 
   <body>
     <header>
-      <h1>MENU</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#cadeira">Cadeira</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <section class="heropage">
-        <section class="texto-motivacional">
+      <section class="heropage" id="inicio">
+        <div class="texto-motivacional">
           <p>
             Desenvolvo soluções digitais que
-            <span style="color: #5dd429">conectam.</span>
+            <span style="color: #bdd370">conectam.</span>
           </p>
 
           <p>
@@ -27,20 +33,20 @@
             foco em performance, usabilidade e design centrado no utilizador.
           </p>
 
-          <p class="butao-projetos">Projetos</p>
-        </section>
+          <a href="projetos" class="butao-projetos">Projetos</a>
+        </div>
       </section>
 
-      <section class="labs">
-        <p>OS MEUS LABS</p>
-        <ul>
-          <li><a href="lab1/index.html">Lab1</a></li>
-          <li><a href="lab2/index.html">Lab2</a></li>
-          <li><a href="lab3/index.html">Lab3</a></li>
-        </ul>
+      <section class="labs" id="projetos">
+        <h2>Projetos</h2>
+        <div class="lablinks">
+          <a href="lab1/index.html">Lab1</a>
+          <a href="lab2/index.html">Lab2</a>
+          <a href="lab3/index.html">Lab3</a>
+        </div>
       </section>
 
-      <section class="diw">
+      <section class="diw" id="cadeira">
         <p>Eis a minha primeira página Web!</p>
         <p>
           Na Unidade Curricular de
