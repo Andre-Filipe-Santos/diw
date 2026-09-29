@@ -1,3 +1,75 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+/* Base Desktop Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Provides spacing directly between <a> elements on desktop */
+
+  padding: 10px 20px;
+  background-color: #ccba8f;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: black;
+  background-color: white;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  filter: brightness(90%);
+}
+
+.hamburguer {
+  color: black;
+  font-weight: bold;
+  display: none;
+}
+
+/* Responsividade Hamburguer (Mobile Layout) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .hamburguer {
+    display: block;
+    align-self: flex-end; /* Moves icon to the top right */
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin: 0;
+    text-align: right;
+  }
+
+  /* Hide all links by default on mobile */
+  nav a {
+    display: none;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Reveal all links on navigation hover */
+  nav:hover a {
+    display: block;
+  }
+}
+
 h1 {
   display: flex;
   justify-content: center;
@@ -5,17 +77,6 @@ h1 {
   background-color: #bdd370;
   padding: 50px 0;
   border-radius: 10px;
-}
-
-header {
-  margin-bottom: 30px;
-}
-
-nav {
-  padding: 3px 0;
-  background-color: #ccba8f;
-  border-radius: 10px;
-  margin-bottom: 30px;
 }
 
 h2 {
@@ -42,8 +103,8 @@ main {
 section {
   display: flex;
   justify-content: center;
-  width: 100%;             /* Permite fluidez */
-  max-width: 1000px;        /* Limite máximo sem min-width rígido */
+  width: 100%;
+  max-width: 1000px;
   margin: 20px 0;
   box-sizing: border-box;
 }
@@ -56,19 +117,6 @@ section {
   display: flex;
   justify-content: center;
   gap: 50px;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-  color: white;
-  list-style-type: none;
-  gap: 100px;
-}
-
-ul a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .tabela {
@@ -85,15 +133,15 @@ ul a {
 
 .fotos {
   display: flex;
-  flex-wrap: wrap;         /* Permite passar fotos para a linha de baixo */
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 1000px;       /* Ocupa a largura total até 1000px */
+  max-width: 1000px;
   gap: 20px;
 }
 
 .fotos img {
-  width: 150px;            /* Largura fixa base de cada foto */
+  width: 150px;
   height: auto;
   border-radius: 10px;
 }

@@ -1,17 +1,21 @@
-
-header{
-  top: 0px;/*obrigatório para que sticky funcione*/
-  z-index: 1000;/*para se sobrepor a tudo o resto da página*/
-  position: sticky;
-}
-nav ul {
-
+header {
   display: flex;
   justify-content: right;
-  list-style: none;
+  align-items: center;
 
-  background-color: #88b967;
+  top: 0px; /*obrigatório para que sticky funcione*/
+  z-index: 1000; /*para se sobrepor a tudo o resto da página*/
+  position: sticky;
+
+  background-color: #88b967 ;
   border-radius: 10px;
+  height: 4rem;
+}
+nav ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
 
 
 
@@ -21,11 +25,10 @@ nav ul {
   padding-right: 100px;
   gap: 3vw;
   margin: 0;
-
 }
-nav a  {
+nav a {
   color: white;
-  font-size: 1vw;
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -53,30 +56,27 @@ section {
   flex-direction: column;
 
   background-image: url("/images/heroimage4.jpg");
-  background-size:cover;
+  background-size: cover;
   border-radius: 10px;
 }
 /*================================================ HERO PAGE=============================================================================*/
 .texto-motivacional {
   display: flex;
   flex-direction: column;
-  align-items: center;/*para puxar todos os elementos para o centro do container*/
+  align-items: center; /*para puxar todos os elementos para o centro do container*/
 
-  position: relative;/*para descentrar toda a secção do texto para a esquerda*/
+  position: relative; /*para descentrar toda a secção do texto para a esquerda*/
   top: 1vw; /*para a font ser relativa ao viewport width - ser dinâmico com window drag*/
   left: 15vw;
-  width: 50vw;/*limita o container para o texto aparecer em 2 linhas*/
-
+  width: 50vw; /*limita o container para o texto aparecer em 2 linhas*/
 
   color: #ffffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-
-
 }
-.catchfrase{
+.catchfrase {
   margin-bottom: 70px;
 }
-.texto-highlight{
+.texto-highlight {
   color: #88b967;
 }
 
@@ -87,16 +87,14 @@ section {
   margin-bottom: 0px;
 }
 .texto-motivacional div:nth-child(2) {
-
   display: flex;
   align-items: center;
-  width: 30vw;  /*limita o container para o texto aparecer em 2 linhas*/
+  width: 30vw; /*limita o container para o texto aparecer em 2 linhas*/
   text-align: center;
   font-size: 1vw;
   margin-top: 0px;
 }
 .texto-motivacional div:nth-child(3) {
-
   align-self: flex-start; /*isto faz override ao align-items:center do container parent e puxa o butao pra esquerda*/
   margin-top: 70px;
 }
@@ -104,6 +102,7 @@ section {
 .butao-projetos {
   background-color: #88b967;
   color: white;
+  box-shadow: 2px 3px 15px black;
   border-radius: 10px;
   text-decoration: none;
 
@@ -112,12 +111,12 @@ section {
   padding: 10px 20px;
   width: auto; /* Fits to the content or set a custom width */
 }
+
 /*=================================================================================================================================================*/
 
 /*================================================LABS=============================================================================*/
-.labs{
+.labs {
   background-color: #ede3da;
-
 }
 .labs h2 {
   display: flex;
@@ -139,33 +138,68 @@ section {
   flex-grow: 1;
   justify-content: space-evenly;
 
-
   gap: 50px;
 }
-.lablinks a{
+.lablinks a {
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: #bfc8d4;
   color: #ffffff;
-  font-size: 1vw ;
+  font-size: 1vw;
   text-decoration: none;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 
   border-radius: 30px;
   width: 40vw;
   height: 5vw;
-
 }
-.lablinks a:first-child{
+.lablinks a:first-child {
   align-self: flex-start;
 }
-.lablinks a:nth-child(2){
+.lablinks a:nth-child(2) {
   align-self: center;
-
 }
-.lablinks a:last-child{
+.lablinks a:last-child {
   align-self: flex-end;
 }
+
+/*=================================================================================================================================================*/
+
+/*================================================DIW=============================================================================*/
+
+.diw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c0e2ff;
+  font-weight: bold;
+}
+.diw h2{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Horizontally centers all children inside .labs */
+
+  align-self: stretch; /* Overrides align-items: center from .diw to span the full width */
+
+  margin: 50px 50px;
+
+  background-color: #392922;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  height: 50px;
+  border-radius: 10px;
+}
+/*layout para desktop*/
+@media (min-width: 600px) {
+  .diw > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+}
+
 /*=================================================================================================================================================*/
