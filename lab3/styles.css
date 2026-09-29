@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -38,7 +42,7 @@ a:hover {
   display: none;
 }
 
-/* Responsividade Hamburguer (Mobile Layout) */
+/* Responsividade Hamburguer (Mobile Layout) todas as paginas*/
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -70,6 +74,18 @@ a:hover {
   }
 }
 
+/*========responsividade localizacao*/
+@media (min-width: 600px) {
+  .localizacao-iframe {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .localizacao-iframe p {
+    text-align: center;
+  }
+}
+
 h1 {
   display: flex;
   justify-content: center;
@@ -90,7 +106,6 @@ h2 {
 
 body {
   background-color: #f5ebe0;
-  margin: 0;
 }
 
 main {
@@ -104,7 +119,6 @@ section {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 1000px;
   margin: 20px 0;
   box-sizing: border-box;
 }
@@ -144,6 +158,15 @@ section {
   width: 150px;
   height: auto;
   border-radius: 10px;
+}
+
+.imagem-grande {
+  width: 100%;
+}
+
+.imagem-grande img {
+  border-radius: 10px;
+  width: 100%;
 }
 
 .poema {
