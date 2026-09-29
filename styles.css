@@ -55,7 +55,7 @@ section {
   display: flex;
   flex-direction: column;
 
-  background-image: url("images/heroimage4.jpg");
+  background-image: url("images/heroimage.jpg");
   background-size: cover;
   border-radius: 10px;
 }
