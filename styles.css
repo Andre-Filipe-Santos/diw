@@ -157,13 +157,10 @@ section {
   width: 40vw;
   height: 5vw;
 }
-.lablinks a:first-child {
+.lablinks a:nth-child(odd) {
   align-self: flex-start;
 }
-.lablinks a:nth-child(2) {
-  align-self: center;
-}
-.lablinks a:last-child {
+.lablinks a:nth-child(even) {
   align-self: flex-end;
 }
 

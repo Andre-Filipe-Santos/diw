@@ -1,0 +1,18 @@
+* {box-sizing: border-box;}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    margin: 80px 0 80px 0;
+}
+main span {
+
+    background-color: lightgray;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px 10px;
+
+}
