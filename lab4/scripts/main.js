@@ -1,6 +1,6 @@
-// PASSA POR AQUI!
+// 1 PASSA POR AQUI!
 
-const text_hover = document.querySelector("section:nth-of-type(1)");
+const text_hover = document.querySelector("#ponto_1");
 
 function muda_texto(){
 
@@ -14,16 +14,69 @@ function muda_texto(){
 text_hover.addEventListener("mouseover",muda_texto);
 text_hover.addEventListener("mouseout",muda_texto);
 
-//PINTA-ME
+
+// 2 PINTA-ME
 
 const text_click = document.querySelector("section:nth-of-type(2)");
 const red = document.querySelector("#red");
 const green = document.querySelector("#green");
 const blue = document.querySelector("#blue");
 
-function colorir_texto(){
-
-
+function colorir_red(){
+    text_click.style.color = "red";
 }
+function colorir_green(){
+    text_click.style.color = "green";
+}
+function colorir_blue(){
+    text_click.style.color = "blue";
+}
+red.addEventListener("click", colorir_red);
+green.addEventListener("click", colorir_green);
+blue.addEventListener("click", colorir_blue);
+
+
+// 3 EXPERIMENTA ESCREVER
+
+const caixa_1 = document.querySelector("#caixa1");
+
+let cores = 0;
+
+function experimenta_escrever(){
+
+    if(cores === 0){
+        caixa_1.style.backgroundColor = "yellow";
+        cores++;
+    }else if(cores === 1){
+        caixa_1.style.backgroundColor = "green";
+        cores++;
+    }else if (cores === 2){
+        caixa_1.style.backgroundColor = "lightBlue";
+        cores = 0;
+    }
+}
+
+caixa_1.addEventListener("keydown",experimenta_escrever);
+
+// 4 ESCOLHA UMA COR EM INGLES
+
+
+
+
+// 5 CONTADOR
+
+let count = 0;
+
+const butao_contador = document.querySelector("#contador")
+const result = document.querySelector("#resultado");
+result.textContent = count;
+
+function contar(){
+    count++;
+    result.textContent = count;
+}
+
+butao_contador.addEventListener("click", contar);
+
 
 

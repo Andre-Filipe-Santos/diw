@@ -4,31 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LAB4</title>
+
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="scripts/main.js"></script>
   </head>
+
   <body>
     <header><h1>Página "artilhada" com 5 Eventos</h1></header>
 
     <main>
-      <section>1. Passa por aqui!</section>
+      <section id="ponto_1">1. Passa por aqui!</section>
 
       <section>
         2. Pinta-me! <button id="red">Red</button>
         <button id="green">Green</button> <button id="blue">Bue</button>
       </section>
 
-      <section>3. Experimenta escrever...<input type="text" /></section>
+      <section id="ponto_3">
+        3. Experimenta escrever...<input id="caixa1" type="text" />
+      </section>
 
       <section>
         4. Escolha uma cor em inglês: <input type="text" />
         <button>submeter</button>
       </section>
 
-      <section>5. <button>Conta!</button> <span>33</span></section>
+      <section>
+        5. <button id="contador">Conta!</button> <span id="resultado"></span>
+      </section>
     </main>
 
     <footer>Diw ©</footer>
 
-    <script src="scripts/main.js"></script>
+    <!--SE NAO USAR O DEFER TENHO QUE DECLARAR O SCRIPT AQUI
+    PORQUE ASSIM SÓ "EXECUTA" APOS O DOM ESTAR CONSTRUIDO-->
+    <!-- <script src="scripts/main.js"></script> -->
   </body>
 </html>
