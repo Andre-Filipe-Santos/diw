@@ -60,8 +60,21 @@ caixa_1.addEventListener("keydown",experimenta_escrever);
 
 // 4 ESCOLHA UMA COR EM INGLES
 
+const background_color = document.querySelector("body")
+const ponto_4 = document.querySelector("#ponto_4");
 
+const form_cor = document.querySelector("form");
 
+function colorir_fundo(event){
+
+    //impede a pagina de fazer refresh
+    event.preventDefault();
+
+    background_color.style.backgroundColor = ponto_4.value;
+
+}
+
+form_cor.addEventListener("submit", colorir_fundo);
 
 // 5 CONTADOR
 
@@ -77,6 +90,5 @@ function contar(){
 }
 
 butao_contador.addEventListener("click", contar);
-
 
 
