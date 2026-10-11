@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+main span {
+  background-color: lightgray;
+  border-radius: 10px;
+  border: 1px solid black;
+
+  padding: 5px 10px;
+}
+main>section {
+    margin: 80px 0;
+}
+.exercicios section {
+    margin: 80px 0;
+}
+main section:nth-of-type(4) {
+  display: flex;
+}
+#container_bolas {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  height: 200px;
+  gap: 10px;
+}
+#container_bolas section {
+  background-color: gray;
+  gap: 10px;
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+  flex-shrink: 0; /* Impede a deformação no flexbox */
+}
+#container_bolas section:last-child {
+  background-color: red;
+}
+#insere_dados{
+    display: flex;
+    align-items: center;
+}

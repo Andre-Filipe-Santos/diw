@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAB5</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="scripts/main.js"></script>
+  </head>
+
+  <body>
+    <header><h1>Página "artilhada" com 5 Eventos</h1></header>
+
+    <main>
+      <section class="exercicios">
+        <section id="ponto_1">1. Passa por aqui!</section>
+
+        <section id="texto_para_pintar">
+          2. Clicka numa caixa:
+          <button class="text_color" data-color="red">Red</button>
+          <button class="text_color" data-color="green">Green</button>
+          <button class="text_color" data-color="blue">Bue</button>
+        </section>
+
+        <section id="ponto_3">
+          3. Experimenta escrever...<input id="caixa1" type="text" />
+        </section>
+
+        <section>
+          4. Escolha uma cor:
+          <select class="butoes_cores">
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </section>
+
+        <section>
+          5. <button id="contador">Conta!</button> <span id="resultado"></span>
+        </section>
+      </section>
+
+      <section id="insere_dados">
+        <p>6.</p>
+        <form id="formulario">
+          <input type="text" placeholder="Insira o seu nome" id="nome" />
+          <input type="text" placeholder="Insira a sua idade" id="idade" />
+          <input type="submit" />
+        </form>
+      </section>
+      <p id="resultado_form"></p>
+
+      <section>
+        7. Escolhe uma opção:
+
+        <select id="organize_bolas">
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+          <option value="column">column</option>
+          <option value="column-reverse">column-reverse</option>
+        </select>
+      </section>
+
+      <section id="container_bolas">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+      </section>
+
+      <section>
+        8. Automatic Counter: <span id="automatic_counter"></span>
+      </section>
+      <section id="jogo"></section>
+    </main>
+
+    <footer>Diw ©</footer>
+
+    <!--SE NAO USAR O DEFER TENHO QUE DECLARAR O SCRIPT AQUI
+    PORQUE ASSIM SÓ "EXECUTA" APOS O DOM ESTAR CONSTRUIDO-->
+    <!-- <script src="scripts/main.js"></script> -->
+  </body>
+</html>
