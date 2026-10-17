@@ -24,4 +24,6 @@ function guardaCarta(e) {
 function atualizaLista(colecao, nodeUlColecao) {
     nodeUlColecao.innerHTML = "";
 
+    //continuar aqui
+
 }
