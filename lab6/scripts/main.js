@@ -6,16 +6,23 @@ const nodeInputNumero = document.querySelector(
 const nodeInputSubmit = document.querySelector(
   " #colecao ~ section input[type='submit'] ",
 );
+
 const nodeUlColecao = document.querySelector(" #colecao ul ");
 const nodeUlColecaoRepetidos = document.querySelector(" #repetidos ul ");
 
-const colecao = [];
-const repetidos = [];
+//LOCAL STORAGE
+let colecao = JSON.parse(localStorage.getItem("colecao") || "[]");
+let repetidos = JSON.parse(localStorage.getItem("repetidos") || "[]");
 
 const contadorCromos = document.querySelector("#colecao span");
 const contadorCromosRepetidos = document.querySelector("#repetidos span");
 
+//Renderização inicial no DOM com os dados lidos do localStorage
+atualizaLista(colecao, nodeUlColecao);
+atualizaLista(repetidos, nodeUlColecaoRepetidos);
+
 // B. event handlers
+
 function guardaCarta(e) {
   e.preventDefault(); // para nao fazer refresh quando se faz submit
   const valorSubmetido = nodeInputNumero.value;
@@ -24,7 +31,7 @@ function guardaCarta(e) {
   nodeInputNumero.value = "";
 
   if (!colecao.includes(valorSubmetido)) {
-    //se o valor nao existir no array
+    //se o valor nao existir no arrayCromos
 
     colecao.push(valorSubmetido); //adiciona
 
@@ -34,8 +41,6 @@ function guardaCarta(e) {
     });
 
     atualizaLista(colecao, nodeUlColecao); //insere no html na lista <ul> o <li> com o valor submetido
-
-    contadorCromos.textContent = colecao.length; // manda num elementos do array para o contador
   } else {
     repetidos.push(valorSubmetido);
 
@@ -44,37 +49,48 @@ function guardaCarta(e) {
     });
 
     atualizaLista(repetidos, nodeUlColecaoRepetidos);
-
-    contadorCromosRepetidos.textContent = repetidos.length;
   }
 }
 
-function atualizaLista(array, lista_Ul) {
+function atualizaLista(arrayCromos, lista_Ul) {
   lista_Ul.innerHTML = "";
 
-
   if (lista_Ul === nodeUlColecaoRepetidos) {
-
-    array.forEach((array_element) => {
-
+    arrayCromos.forEach((cromo, index) => {
       const nodeLi = document.createElement("li");
 
-      nodeLi.innerHTML = `${array_element} <button>Eliminar</button>`;
+      nodeLi.innerHTML = `${cromo} <button>Eliminar</button>`;
 
       lista_Ul.append(nodeLi);
+
+      nodeLi.querySelector("button").addEventListener("click", function () {
+        apagarCromo(index);
+      });
     });
 
+    contadorCromosRepetidos.textContent = repetidos.length;
+    localStorage.setItem("repetidos", JSON.stringify(repetidos));
   } else {
 
-    array.forEach((array_element) => {
-
+    arrayCromos.forEach((cromo) => {
       const nodeLi = document.createElement("li");
 
-      nodeLi.textContent = array_element;
+      nodeLi.textContent = cromo;
 
       lista_Ul.append(nodeLi);
+
+
     });
+
+    contadorCromos.textContent = colecao.length; // manda num elementos do arrayCromos para o contador
+    localStorage.setItem( "colecao", JSON.stringify(colecao));
+
   }
+}
+
+function apagarCromo(index) {
+  repetidos.splice(index, 1);
+  atualizaLista(repetidos, nodeUlColecaoRepetidos);
 }
 
 // C. event listeners
@@ -88,13 +104,3 @@ form.onsubmit = guardaCarta;
 
 //dentro desta ul vai buscar os butoes
 const listaButoes = nodeUlColecaoRepetidos.querySelectorAll("button");
-
-listaButoes.forEach(function(butao){
-
-  butao.onclick = function(){
-
-
-
-  }
-
-});
