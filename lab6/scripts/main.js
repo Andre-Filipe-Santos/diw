@@ -71,20 +71,16 @@ function atualizaLista(arrayCromos, lista_Ul) {
     contadorCromosRepetidos.textContent = repetidos.length;
     localStorage.setItem("repetidos", JSON.stringify(repetidos));
   } else {
-
     arrayCromos.forEach((cromo) => {
       const nodeLi = document.createElement("li");
 
       nodeLi.textContent = cromo;
 
       lista_Ul.append(nodeLi);
-
-
     });
 
     contadorCromos.textContent = colecao.length; // manda num elementos do arrayCromos para o contador
-    localStorage.setItem( "colecao", JSON.stringify(colecao));
-
+    localStorage.setItem("colecao", JSON.stringify(colecao));
   }
 }
 

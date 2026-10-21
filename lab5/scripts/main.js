@@ -18,14 +18,11 @@ text_hover.addEventListener("mouseout", muda_texto);
 const text_click = document.querySelector("#texto_para_pintar");
 const butao_que_pinta = document.querySelectorAll(".text_color");
 
-butao_que_pinta.forEach(function(butao){
-
-    butao.addEventListener("click", ()=>{
-        text_click.style.color = butao.dataset.color;
-    })
-
-})
-
+butao_que_pinta.forEach(function (butao) {
+  butao.addEventListener("click", () => {
+    text_click.style.color = butao.dataset.color;
+  });
+});
 
 // 3 EXPERIMENTA ESCREVER
 
@@ -54,12 +51,10 @@ const fundo = document.querySelector("body");
 const selected_color = document.querySelectorAll(".butoes_cores");
 
 selected_color.forEach(function (butao) {
-
   butao.addEventListener("change", () => {
     //está aqui a arrow function
     fundo.style.backgroundColor = butao.value;
   });
-
 });
 
 // 5 CONTADOR COM LOCAL STORAGE
@@ -67,18 +62,17 @@ selected_color.forEach(function (butao) {
 const butao_contador = document.querySelector("#contador");
 const result = document.querySelector("#resultado");
 
-if( !localStorage.getItem("contador")){
-  localStorage.setItem("contador", 0)
+if (!localStorage.getItem("contador")) {
+  localStorage.setItem("contador", 0);
 }
 
 let count = localStorage.getItem("contador");
 result.textContent = count;
 
-butao_contador.addEventListener("click", function contar(){
+butao_contador.addEventListener("click", function contar() {
   count++;
-  localStorage.setItem("contador", count)
+  localStorage.setItem("contador", count);
   result.textContent = count;
-
 });
 
 // CONTAINER DE BOLAS
@@ -86,38 +80,29 @@ butao_contador.addEventListener("click", function contar(){
 const organizer = document.querySelectorAll("#organize_bolas");
 const container_bolas = document.querySelector("#container_bolas");
 
-organizer.forEach(function(elemento){
-
-    elemento.addEventListener("change",function(){
-
-        container_bolas.style.flexDirection = elemento.value;
-
-    })
-
-})
+organizer.forEach(function (elemento) {
+  elemento.addEventListener("change", function () {
+    container_bolas.style.flexDirection = elemento.value;
+  });
+});
 
 //ONSUBMIT
 
 const dados_form = document.querySelector("#formulario");
 const result_form = document.querySelector("#resultado_form");
 
-dados_form.addEventListener("submit", function(e){
-
+dados_form.addEventListener("submit", function (e) {
   e.preventDefault(); // Evita que a página recarregue automaticamente
 
   const nome = dados_form.querySelector("#nome").value; //sem value fica só o ponteiro para ...
   const idade = dados_form.querySelector("#idade").value;
 
-  if(nome !== "" && idade!== ""){
-
-    result_form.textContent = `Olá, o ${nome} tem ${idade}!`
-  }else{
-
-    result_form.textContent = "Por acaso não tens nome??? 🤔🤔"
+  if (nome !== "" && idade !== "") {
+    result_form.textContent = `Olá, o ${nome} tem ${idade}!`;
+  } else {
+    result_form.textContent = "Por acaso não tens nome??? 🤔🤔";
   }
-
-
-})
+});
 
 //AUTOMATIC COUNTER
 
@@ -127,22 +112,15 @@ let result_automatico = document.querySelector("#automatic_counter");
 
 const result_jogo = document.querySelector("#jogo");
 
-setInterval(function(){
+setInterval(function () {
   contador_automatico++;
   result_automatico.textContent = contador_automatico;
 
-  if(contador_automatico == count){
-    result_jogo.textContent = "GANDA MÁQUINA"
-
-  }else{
-    result_jogo.textContent = "Tenta apanhar-me com o contador!"
-
+  if (contador_automatico == count) {
+    result_jogo.textContent = "GANDA MÁQUINA";
+  } else {
+    result_jogo.textContent = "Tenta apanhar-me com o contador!";
   }
-
-},1000)
+}, 1000);
 
 //JOGO
-
-
-
-
