@@ -2,50 +2,69 @@
 
 const produtosHTML = document.querySelector("#produtos");
 
-// B. Funções utilitárias
-function criarProduto(produto){
+if( !localStorage.getItem("produtosSelecionados")){
 
-    const newArticle = document.createElement("article");
-    const newTitle = document.createElement("h3");
-    const newImage = document.createElement("img");
-    const newPrice = document.createElement("p");
-    const newRating = document.createElement("p");
-    const newDescription = document.createElement("p");
-    const newAddButton = document.createElement("button");
-
-    newTitle.textContent = produto.title;
-    newImage.src = produto.image;
-    newPrice.textContent = `Custo total: ${produto.price} €`;
-    newRating.textContent = `Rating: ${produto.rating.rate} Nº Reviews: ${produto.rating.count}`;
-    
-    newDescription.textContent = produto.description;
-    newDescription.className = "description";
-
-    newAddButton.type = "button";
-    newAddButton.textContent = "+ Adicionar ao Cesto"
-     
-
-    newArticle.append(newTitle);
-    newArticle.append(newImage);
-    newArticle.append(newPrice);
-    newArticle.append(newRating);
-    newArticle.append(newDescription);
-
-    newArticle.append(newAddButton);
-
-    
-
-    return newArticle;
-
+    localStorage.setItem("produtosSelecionados",JSON.stringify([]))    
 }
- 
+
+
+
+// B. Funções utilitárias
+function criarProduto(produto) {
+
+  const newArticle = document.createElement("article");
+
+  const newTitle = document.createElement("h3");
+  newTitle.textContent = produto.title;
+
+  const newImage = document.createElement("img");
+  newImage.src = produto.image;
+
+  const newPrice = document.createElement("p");
+  newPrice.textContent = `Custo total: ${produto.price} €`;
+
+  const newRating = document.createElement("p");
+  newRating.textContent = `Rating: ${produto.rating.rate} Nº Reviews: ${produto.rating.count}`;
+
+  const newDescription = document.createElement("p");
+  newDescription.textContent = produto.description;
+  newDescription.className = "description";
+
+  const newAddButton = document.createElement("button");
+  newAddButton.type = "button";
+  newAddButton.textContent = "+ Adicionar ao Cesto";
+
+  newAddButton.addEventListener("click", function(e){
+
+    e.preventDefault;
+
+    let produtosSelecionados = JSON.parse(localStorage.getItem("produtosSelecionados")) || [];
+
+    produtosSelecionados.push(produto);
+
+    localStorage.setItem("produtosSelecionados", JSON.stringify(produtosSelecionados));
+    
+
+
+  });
+
+  newArticle.append(
+    newTitle,
+    newImage,
+    newPrice,
+    newRating,
+    newDescription,
+    newAddButton,
+  );
+
+  return newArticle;
+}
+
 // C. Event handlers
-function renderizarProdutos(produtos){
+function renderizarProdutos(produtos) {
+  produtosHTML.innerHTML = "";
 
-    produtosHTML.innerHTML = "";
-
-   produtos.forEach((produto) => {
-
+  produtos.forEach((produto) => {
     const newDiv = document.createElement("div");
 
     const newArticle = criarProduto(produto); //cria produto para cada elemento da lista
@@ -53,11 +72,10 @@ function renderizarProdutos(produtos){
     newDiv.append(newArticle);
 
     produtosHTML.append(newDiv);
-
-   });
+  });
 }
- 
+
 // D. Event Listeners
- 
+
 // E. Inicialização
 renderizarProdutos(produtos);

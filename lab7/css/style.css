@@ -69,6 +69,8 @@ main {
 
 div {
   display: flex;
+  flex-direction: column;
+  
   
   padding: 20px;
   background-color: #ffffff;
@@ -80,6 +82,7 @@ div {
   width: 100%;
   max-width: 320px;
   min-width: 280px;
+  
 }
 
 article {
@@ -88,6 +91,9 @@ article {
   align-items: center;
   gap: 15px; /* Define o espaço exato entre cada linha de texto/elemento */
   color: #334155;
+
+  /* Ocupa toda a altura disponível dentro do div */
+  height: 100%;
 }
 
 article h3{
@@ -111,6 +117,11 @@ article img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+article button{
+  /* Empurra o botão para o limite inferior do cartão */
+  margin-top: auto;
 }
 
 /* ==================== */
