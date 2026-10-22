@@ -1,20 +1,28 @@
 /* ==========BOAS PRATICAS========== */
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
+
 /* ==================== */
 
 /* ==========CABECALHO DA LOJA========== */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 
-  background-color: rgb(20, 142, 212);
-  color: white;
+  /* propriedades para fixar o menu */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background-color: #0f172a;
+  color: #ffffff;
 }
 
 header ul {
@@ -26,27 +34,96 @@ header ul {
 header a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.5s ease;
 }
+
+header a:hover {
+  color: #38bdf8;
+}
+
 /* ==================== */
 
 /* ==========MAIN========== */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  gap: 30px;
+
   padding: 50px 50px;
+  background-color: #f8fafc;
 }
 
 #produtos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
+
+div {
+  display: flex;
+  
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+
+  /* regras de largura para os cards dos produtos */
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Define o espaço exato entre cada linha de texto/elemento */
+  color: #334155;
+}
+
+article h3{
+  display: flex;
+  flex-wrap: wrap;
+  color: #0f172a;
+  text-align: center;
+}
+
+article .description{
+  border-radius: 8px;
+  padding: 12px 15px;
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+article img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 /* ==================== */
 
 /* ==========FOOTER========== */
+
 footer {
   display: flex;
   justify-content: center;
+  padding: 20px;
+  background-color: #0f172a;
+  color: #94a3b8;
+  width: 100%;
 }
+
 /* ==================== */
