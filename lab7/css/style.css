@@ -46,7 +46,13 @@ header a:hover {
 /* ==========MAIN========== */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
 }
 
 main {
@@ -60,6 +66,14 @@ main {
   background-color: #f8fafc;
 }
 
+#filterContainer {
+  width: 100%;
+  padding: 70px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 #produtos {
   display: flex;
   flex-wrap: wrap;
@@ -70,19 +84,19 @@ main {
 div {
   display: flex;
   flex-direction: column;
-  
-  
+
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e8f0;
 
   /* regras de largura para os cards dos produtos */
   width: 100%;
   max-width: 320px;
   min-width: 280px;
-  
 }
 
 article {
@@ -96,14 +110,14 @@ article {
   height: 100%;
 }
 
-article h3{
+article h3 {
   display: flex;
   flex-wrap: wrap;
   color: #0f172a;
   text-align: center;
 }
 
-article .description{
+article .description {
   border-radius: 8px;
   padding: 12px 15px;
   background-color: #f1f5f9;
@@ -119,9 +133,16 @@ article img {
   border-radius: 8px;
 }
 
-article button{
+article button {
   /* Empurra o botão para o limite inferior do cartão */
   margin-top: auto;
+}
+
+#cesto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* ==================== */

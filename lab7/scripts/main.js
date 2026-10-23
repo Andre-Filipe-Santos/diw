@@ -4,6 +4,8 @@ const produtosHTML = document.querySelector("#produtos");
 const produtosCestoHTML = document.querySelector("#cesto");
 const totalHTML = document.querySelector("#total");
 
+const filterHTML = document.querySelector("#filters");
+
 // Garante que a chave de produtos selecionados existe no arranque
 if (!localStorage.getItem("produtosSelecionados")) {
   localStorage.setItem("produtosSelecionados", JSON.stringify([]));
@@ -153,3 +155,5 @@ function renderizarProdutos(produtos) {
     produtosHTML.append(newDiv);
   });
 }
+
+filterHTML.addEventListener("change",);
